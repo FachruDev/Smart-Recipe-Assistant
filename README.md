@@ -2,8 +2,6 @@
 
 <p align="center">
   <img src="https://img.shields.io/github/last-commit/FachruDev/Smart-Recipe-Assistant?style=for-the-badge&logo=github&color=black" alt="Last Commit">
-  <img src="https://img.shields.io/github/languages/top/FachruDev/Smart-Recipe-Assistant?style=for-the-badge&color=3399ff" alt="Top Language">
-  <img src="https://img.shields.io/github/languages/count/FachruDev/Smart-Recipe-Assistant?style=for-the-badge&color=007ec6" alt="Languages">
 </p>
 
 <h2 align="center"> Built with these technologies: </h2>
@@ -107,9 +105,3 @@ We love contributions! Please follow these steps:
 2. Create a feature branch (`git checkout -b feature/your-feature`)
 3. Commit changes in the appropriate submodule
 4. Push and open a Pull Request
-
----
-
-## 📄 License
-
-MIT License. See `LICENSE` for more details.
