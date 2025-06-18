@@ -1,0 +1,35 @@
+name: Auto Update Submodules to Latest Main
+
+on:
+  schedule:
+    - cron: '0 * * * *' 
+  workflow_dispatch:     
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout root repo (beserta submodule)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GH_TOKEN }}
+
+      - name: Update submodules ke commit terbaru branch main
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git submodule update --remote --merge
+
+      - name: Commit jika ada perubahan submodule
+        run: |
+          git add .
+          if ! git diff --cached --quiet; then
+            git commit -m "ci: auto update submodules to latest main"
+            git push origin HEAD:main
+          else
+            echo "No submodule updates detected."
+          fi
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
