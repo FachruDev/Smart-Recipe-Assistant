@@ -1,6 +1,9 @@
 [submodule "backend"]
-	path = backend
-	url = https://github.com/FachruDev/Recipe-Ai-backend
+    path = backend
+    url = https://github.com/FachruDev/Recipe-Ai-backend
+    branch = main
+
 [submodule "frontend"]
-	path = frontend
-	url = https://github.com/FachruDev/Recipe-Ai-Frontend
+    path = frontend
+    url = https://github.com/FachruDev/Recipe-Ai-Frontend
+    branch = main
